@@ -24,9 +24,7 @@ def add_db():
             "department":stud_department,
             "year":stud_year
         })
-        flash("Successfully added","success")
-        return redirect("/")
-
+        return redirect("/"),200
     
 @app.route('/name/<string:name>',methods=['GET','PUT','DELETE'])
 def single_row(name):
@@ -56,6 +54,8 @@ def login():
     pwd = request.form['pwd']
 
     if user_id == 'vetrivel' and pwd == 'password':
-        return 'Successfully logged in'
+        # return 'Successfully logged in'
+        return redirect('/')    
     else:
         return 'Invalid user id or password.'
+    
