@@ -1,16 +1,16 @@
-stages:
-    - test
-    - build
+# stages:
+#     - test
+#     - build
 
-run_tests:
-    tags:
-           - ci
-    stage: test
-    image:  alpine:latest
-    before_script:
-        - pip install -r requirements.txt
-    script:
-        - python -m pytest
+# run_tests:
+#     tags:
+#            - ci
+#     stage: test
+#     image:  alpine:latest
+#     before_script:
+#         - pip install -r requirements.txt
+#     script:
+#         - python -m pytest
 
 # build job:
 #   stage: build
@@ -33,3 +33,10 @@ demo_job_1:
     - ci
   script:
     - echo hello world
+
+my_app_file_name:
+ script:
+  — apt-get update -qy
+  — apt-get install -y python-dev python-pip
+  — pip install -r requirements.txt
+  
