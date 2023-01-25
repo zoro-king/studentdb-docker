@@ -1,7 +1,6 @@
 stages:
     - test
     - build
-    - deploy
 
 run_tests:
     stage: test
