@@ -6,7 +6,7 @@ run_tests:
     tags:
            - ci
     stage: test
-    image: python:3.10.8-slim-buster
+    image:  alpine:latest
     before_script:
         - pip install -r requirements.txt
     script:
